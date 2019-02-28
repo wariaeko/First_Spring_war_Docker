@@ -1,0 +1,5 @@
+FROM openjdk:8-jre-alpine
+COPY ./target/spring-boot-web-jsp-1.0.war /data/
+WORKDIR /data/
+EXPOSE 8089
+CMD ["java", "-war", "spring-boot-web-jsp-1.0.war"]
